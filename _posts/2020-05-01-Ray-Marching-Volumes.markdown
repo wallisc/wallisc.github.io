@@ -177,7 +177,7 @@ float GetFogDensity(vec3 position)
 {% endhighlight %}
 
 And here's how that looks:
-![ShaderToy screenshot](/assets/RayMarchingVolumes/SoftEdges.gif)
+![ShaderToy screenshot](/assets/RayMarchingVolumes/softEdges.gif)
 ## Density Function
 
 And now that we have a density function we're using, it become easy to add some noise into the volume that will give us a little extra detail and fluff to the volume. In this case, I just re-use the fbm function we used for tweaking wit the volume's shape.
@@ -200,7 +200,7 @@ The volume is looking pretty good at this point! One thing is that there's still
 ![ShaderToy screenshot](/assets/RayMarchingVolumes/LightLeak.jpg)
 This is because opaque objects are rendered before the volume is rendered, so they don't take into account shadowing that should happen from the volume. This is pretty easy to fix, we have a GetShadowFactor function that we can use to calculate shadowing, so we just need to call this for our opaque object lighting. With that we get this:
 
-![ShaderToy screenshot](/assets/RayMarchingVolumes/ShadowOnOpaque.gif)
+![ShaderToy screenshot](/assets/RayMarchingVolumes/shadowOnOpaque.gif)
 
 In addition to getting some really nice colored shadows, it also really helps ground the shadow and sell the volume as a part of the scene. And that's it! There's certainly more I could have done but this felt like it hit the visual bar I wanted for a sample I wanted to keep relatively simple.
 
