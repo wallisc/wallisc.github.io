@@ -10,6 +10,12 @@ TracerBoy is a DX12 physically-based path tracer leveraging DXR. It support for 
 The code is available on [GitHub][github-tracerboy]
 
 ![TracerBoy screenshot](/assets/TracerBoy/dragons.png)
+> Dragons rendered with a variety of physically-based materials including metal, subsurface-scattering and clear cloat. Dragon model from Delatronic from Benedikt Bitterli's [resources page][Benedikt]
+
+
+![TracerBoy screenshot](/assets/TracerBoy/bistro.png)
+> Render of the bistro scene from the [ORCA library][Orca]
+
 
 ## ShaderToy
 
@@ -26,7 +32,8 @@ The scene is modelled entirely using SDFs. Screen-space blurring is done on the 
 ShaderToy available [here][shadertoy-cabin]
 ![ShaderToy screenshot](/assets/ShaderToy/cabin.gif)
 
-
+[Orca]: https://developer.nvidia.com/orca
+[Benedikt]: https://benedikt-bitterli.me/resources/
 [github-tracerboy]: https://github.com/wallisc/TracerBoy
 
 [shadertoy-cabin]: https://www.shadertoy.com/view/3lt3W7
