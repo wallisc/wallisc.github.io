@@ -38,6 +38,12 @@ The scene is modelled entirely using SDFs. Screen-space blurring is done on the 
 ShaderToy available [here][shadertoy-cabin]
 ![ShaderToy screenshot](/assets/ShaderToy/cabin.gif)
 
+## RenderMan Art Challenge
+I entered the [RenderMan "Magic Shop" Art Challenge][MagicShopChallenge]. This was my final result:
+![MagicShopEntry](/assets/MagicShop4k.jpg)
+Mathilda model by Xiong Lin and rig by Leon Sooi. Pixar models by Eman Abdul-Razzaq, Grace Chang, Ethan Crossno, Siobhán Ensley, Derrick Forkel, Felege Gebru, Damian Kwiatkowski, Jeremy Paton, Leif Pedersen, Kylie Wijsmuller, and Miguel Zozaya © Disney/Pixar - RenderMan "Magic Shop" Art Challenge
+
+[MagicShopChallenge]:  https://renderman.pixar.com/news/renderman-magic-shop-art-challenge
 
 [Orca]: https://developer.nvidia.com/orca
 [Benedikt]: https://benedikt-bitterli.me/resources/

@@ -18,19 +18,22 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Untitled Graphics Blog
+title: Chris' Graphics Blog
 email: ""
 description: >- # this means to ignore newlines until "baseurl:"
   This is my graphics blog where I'll post about graphics programming. Probably.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://wallisc.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: chriskwallis
 github_username:  wallisc
+# linkedin_username: christopher-wallis-74551548
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+
+show_excerpts: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
