@@ -3,6 +3,7 @@ layout: post
 title:  "Volumetric Rendering Part 1"
 date:   2020-05-02 09:00:07 -0700
 categories: rendering 
+excerpt: <img src="/assets/RayMarchingVolumes/finalshape.gif">
 tags: [volume, shadertoy, raymarching, rendering]
 ---
 
