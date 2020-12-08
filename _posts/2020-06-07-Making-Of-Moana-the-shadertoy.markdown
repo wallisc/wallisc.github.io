@@ -22,7 +22,7 @@ In order to render water there's 3 important things that need to be nailed down:
 3. Absorption
 
 To show how that all looks in this particular scene, here's a diagram sloppily drawn in, of all things, Microsoft Word (sorry):
-![ShaderToy screenshot](/assets/Moana/diagram.png)
+![ShaderToy screenshot](/assets/Moana/Diagram.png)
 
 In total, that means we have a total of 5 rays per pixel: 1 primary camera ray, 2 reflected rays, and 2 refracted rays. And some of the that involves ray-marching to handle absorption correctly. Needless to say, the brute-force implementation is going to be too slow. So here's a couple of some very scene-specific optimizations I made to make this affordable:
 * The shape of the water makes it almost a certainty that the first reflected ray and second refracted ray will hit the sky. So don't bother checking geometry here, just assume that ray is going towards the sky.
@@ -31,7 +31,7 @@ In total, that means we have a total of 5 rays per pixel: 1 primary camera ray, 
 ### Ray Marching vs Ray Tracing
 At this point, I need to delve into something that's was important for performance, the distinction between ray *tracing* and ray *marching*. I use both in the shader, relying on ray *marching* for the water volume and ray *tracing* for the rest of the opaque objects (coral and sand). If you're already aware of the difference, then you can skip all of this, but if not, read on! The TLDR; of it is that ray tracing is faster but only works with boring shapes (triangles/spheres/etc), ray marching works on all sorts of fun SDFs but is iterative and slower. Keep in mind this is in the context of my ShaderToy, in different contexts there's different trade-offs.
 
-![ShaderToy screenshot](/assets/Moana/diagram2.png)
+![ShaderToy screenshot](/assets/Moana/Diagram2.png)
 
 Lets talk about ray tracing. Ray tracing is a bit of a overloaded term, but in this context I use it to mean *analytically* determining intersection between a ray and some geometry. What's that mean? Well lets take the example of a sphere and a ray. Using [math][SphereIntersect] you can calculate exactly if the ray will hit that sphere and exactly where. The great part is that math doesn't involve any iteration. So what that means is that regardless of where your ray is, where or how far away the sphere is, you will ALWAYS be able to calculate the intersection position (or lack thereof) with a few math operations. And this applies not just to spheres but several other shapes including boxes, triangles, etc. In terms of performance, this is GREAT because we know exactly what we're paying for. If you're coming from a rasterization background, you might be puzzled to hear that ray tracing is "fast". Keep in mind, that we're just talking about a single primitive, once you start talking about things like triangle meshes where there's thousands upon thousands of triangles, things get different. Let's not go there today. In my ShaderToy, I had 6 primitives total (5 spheres and 1 plane).
 
@@ -173,7 +173,7 @@ vec3 SandParallaxOcclusionMapping(vec3 position, vec3 view)
 {% endhighlight %}
 
 And here's how that looks:
-![ShaderToy screenshot](/assets/Moana/pom.gif)
+![ShaderToy screenshot](/assets/Moana/POM.gif)
 
 Finally, the last touch here is to make the sand look wet when it's close to the water. Because the water is modelled as an SDF, it's really easy to query if the water is close by and then make your albedo a little bit darker if it's close by. I also make the ground reflective here to mimic water built up on the sand, but to keep the reflection calculation cheap, I just assume the ray hits the sky (i.e. I don't intersect with the water). One other trick is to generate a reflection ray with a normal pointing straight up (i.e. assuming a flat plane) rather than the normal from the sand dunes. This emulates a "puddle" look where water has built up on top of bumpy sand.
 ![ShaderToy screenshot](/assets/Moana/sandWet.png)
