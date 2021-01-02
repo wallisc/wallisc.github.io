@@ -9,7 +9,7 @@ tags: [renderman, art, rendering]
 
 And now for something completely different.
 
-A combination of [this post from Yining Karl Li][yining] and a general itch to do something more artsy made me attempt something a little crazy, [the RenderMan Art Challenge][ArtChallenge]! The idea of challenge is to take a untextured scene and turn it into a nice final render in 90 days. You're allowed to add your own VFX and modify the scene but the story-telling must revolve around the provided assets. This challenge was extra interesting because they also provided a fully rigged character model to work with, here's what the provided scene looked like for this challenge:
+A combination of [this post from Yining Karl Li][yining] and a general itch to do something more artsy made me attempt something a little crazy, the [RenderMan Art Challenge][ArtChallenge]! The idea of challenge is to take a untextured scene and turn it into a nice final render in 90 days. You're allowed to add your own VFX and modify the scene but the story-telling must revolve around the provided assets. This challenge was extra interesting because they also provided a fully rigged character model to work with, here's what the provided scene looked like for this challenge:
 
 ![Magic Shop Art Challenge Scene](/assets/MagicShop/scene.jpg)
 
@@ -127,7 +127,7 @@ Some of the books still ended up in an awkward position so I just went through a
 Here's how it looks putting that all together (excuse some floating books, I missed a few):
 [![Final Render of Books](/assets/MagicShop/bookpile.jpg)](/assets/MagicShop/bookpile.jpg)
 
-## Opened Hero Books
+## Opened Books
 
 I also wanted to have the character surrounded by a bunch of opened books. The look I was aiming for was a messy desk filled with textbooks and journals as if you're deep into some sort of research project. The main challenge here was getting some nice looking pages. I could have done some modelling (and in hindsight, maybe I should have), but my modelling skills are real poor so I turned to sims instead. I cloned a whole bunch of planes and them imported them into Houdini to sim using the [vellum solver][vellum]. It was quite challenging to get the pages to fall naturally, I had to do some real silly things to get the pages to fall naturally, including adding some fan forces to literally blow the pages away from the spine of the book. Here's how that silliness looks in action:
 
