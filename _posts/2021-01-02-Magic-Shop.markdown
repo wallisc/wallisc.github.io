@@ -11,7 +11,7 @@ And now for something completely different.
 
 A combination of [this post from Yining Karl Li][yining] and a general itch to do something more artsy made me attempt something a little crazy, [the RenderMan Art Challenge][ArtChallenge]! The idea of challenge is to take a untextured scene and turn it into a nice final render in 90 days. You're allowed to add your own VFX and modify the scene but the story-telling must revolve around the provided assets. This challenge was extra interesting because they also provided a fully rigged character model to work with, here's what the provided scene looked like for this challenge:
 
-![Magic Shop Art Challenge Scene](/assets/MagicShop/Scene.jpg)
+![Magic Shop Art Challenge Scene](/assets/MagicShop/scene.jpg)
 
 And here's what my final entry, titled "Midnight Meltdown" looked like (click for the full 4k image):
 
@@ -82,7 +82,7 @@ Afterwards I tooked the sculpted hat and threw it into Substance Painter for som
 ## Blanket
 I wanted a cozy feel along with the candle lighting and I thought having a nice warm looking blanket around the character would help add to the atmosphere. I subdivided a plane and used Maya's nCloth sim to get it to drape over the character. It made an okay starting point but I still had to do a whole bunch of manual vertex pulling to get it to look like it was convincingly wrapped around the character.
 
-![Blanket wireframe](/assets/MagicShop/BlanketWireframe.jpg)
+![Blanket wireframe](/assets/MagicShop/blanketwireframe.jpg)
 *Wireframe of the blanket geometry*
 
 Okay, now to texture the thing. I wanted something warm looking so I though flannel would be a decent idea. So I followed this great [Substance Painter tutorial on making a flannel blanket][Flannel]. And the end result was, well, flannel. Something about it really didn't look right to me:
@@ -116,11 +116,11 @@ The final material ended up being relatively small (especially if you compare it
 *Displacement is used on the pages to make silhouette look more like ruffled pages*
 
 The main thing I leveraged was this cool node called [PxrRamp][PxrRamp]. It lets you a completely tunable color ramp and then a random color gets pulled from that per object. It was quite cool because I could just duplicate books around and they would automatically look different without any work thanks to the PxrRamp!
-![PxrRamp](/assets/MagicShop/PxrRamp.jpg)
+![PxrRamp](/assets/MagicShop/pxrramp.jpg)
 
 
 Okay, so thousands of books textured. Great. Now where do we put all those books? I turned to the built-in bullet sim included in Maya for doing a simple rigid body simulation. Since the books were basically just blocks, it was more than sufficient and really fast! Essentially I just pasted books vertically until I had essentially created a Jenga tower of 1000 books and then let the simulation do it's thing. Here's how that looks:
-![Simulation of falling books](/assets/MagicShop/BookSim.gif)
+![Simulation of falling books](/assets/MagicShop/booksim.gif)
 
 Some of the books still ended up in an awkward position so I just went through and manually hid any books I didn't like after the sim. All the books on the shelves were manually placed by me and a whole lot of copy-paste. I also did a whole bunch of manual rotation just to give the sense that some of the books were falling over and leaning on each other.
 
@@ -179,7 +179,7 @@ The foliage isn't a center piece in the final render but I still added a fair am
 
 SpeedTree generously gave everyone in the competition a 30 day trial to help generate some assets. I didn't do anything advanced, but I did create several vines using the "trellis growth" template provided and imported some of the important scene geometry so that the vines would wrap convincingly in the scene. 
 
-![ShaderToy screenshot](/assets/MagicShop/SpeedTree.jpg)
+![ShaderToy screenshot](/assets/MagicShop/speedtree.jpg)
 *SpeedTree viewport with a modified version of the trellis growth template and the Magic Shop scene geometry*
 
 
