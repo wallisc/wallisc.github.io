@@ -17,7 +17,7 @@ And here's what my final entry, titled "Midnight Meltdown" looked like (click fo
 
 [![Magic Shop Challenge Final Entry](/assets/MagicShop4k.jpg)](/assets/MagicShop4k.jpg)
 
-I still find it a little hard to believe, but my entry ended up getting [first place][FinalEntry]! I highly recommend checking out the other entries, I actually liked a lot of the other entires more than my own, honestly when I submitted my entry, I had zero expectation of even getting placed!
+I still find it a little hard to believe, but my entry ended up getting [first place][FinalEntry]! I highly recommend checking out the other entries, I actually liked a lot of the other entries more than my own, honestly when I submitted my entry, I had zero expectation of even getting placed!
 
 This post went on longer than I expected, but hopefully it'll give you a sense of what it took to get to the final render. If you don't like words, I won't be offended if you want to scroll through and see some cool pictures, though my hope is it inspires some folks to give the challenge a try themself (especially those from an engineering background). The challenge is free for anyone to enter and you'll get feedback from some of the Pixar folks as well as other people participating which was an incredible experience that I can't reccomend enough.
 
