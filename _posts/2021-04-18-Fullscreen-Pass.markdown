@@ -86,7 +86,7 @@ Another question is "Are helper pixels even needed in this case?". With this sim
 # Nice theory...can you prove it?
 Yes we can! Lets bring out our ol' friend Pix again...
 
-So what we want to do is find out how many quads actually got run for a draw. Unfortunately Pix doesn't have a vendor-agnostic way of querying this. However, it DOES have some handshakes with the driver that allows it to get hardware-specific counters with more low-level insights. I'm using an NVidia GPU so I'll be working with their specific counter, but other vendors will have something similar. The counter I'm interested in is "sm__ps_quads_launched.sum":
+So what we want to do is find out how many quads actually got run for a draw. Unfortunately Pix doesn't have a vendor-agnostic way of querying this (**edit:** Dr Pix can display this in both a vendor-agnostic AND more informative way, details at the bottom of this post). However, it DOES have some handshakes with the driver that allows it to get hardware-specific counters with more low-level insights. I'm using an NVidia GPU so I'll be working with their specific counter, but other vendors will have something similar. The counter I'm interested in is "sm__ps_quads_launched.sum":
 
 ![Counter](/assets/FullscreenPass/counter.jpg)
 
@@ -121,9 +121,13 @@ float4 main( uint id : SV_VertexID ) : SV_POSITION
 }
 {% endhighlight %}
 
+# Update
+[Austin Kinross kindly pointed out][Tweet] there's actually another VERY cool way to query quad profiling information using Dr Pix:
+![Counter](/assets/FullscreenPass/drpix.jpg)
 # Acknowledgement
 This isn't my discovery or anything, this is largely inspired from a [StackOverflow answer][StackOverflow] from [Derhass][Derhass]. His answer is pretty comprehensive but I thought it was so fascinating that it was worth digging up performance and counter information to really break it down more concretely.
 
+[Tweet]: https://twitter.com/austinkinross/status/1383990289199603722?s=20
 [Pix]: https://devblogs.microsoft.com/pix/
 [Trip]: https://fgiesen.wordpress.com/2011/07/10/a-trip-through-the-graphics-pipeline-2011-part-8/
 [TopLeft]: https://docs.microsoft.com/en-us/windows/win32/direct3d11/d3d10-graphics-programming-guide-rasterizer-stage-rules#:~:text=Triangle%20Rasterization%20Rules%20(Without%20Multisampling),-Any%20pixel%20center&text=The%20top%2Dleft%20rule%20is,left%20edge%20of%20a%20triangle.&text=A%20top%20edge%2C%20is%20an,is%20above%20the%20other%20edges.
