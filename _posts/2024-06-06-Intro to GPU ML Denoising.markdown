@@ -405,10 +405,10 @@ In the decoding phase we do the opposite. Essentially we are decoding these "dee
 
 Okay that's a wrap. If you were hoping to become a machine learning expert after reading this, uh...this is not the post you were looking for. But hopefully if you came from having no idea what machine learning is, you now have some sense of what's running on your GPU and what the work is involved. I narrowed in on a small slice of machine learning workloads: [Convolution Neural Nets][Conv]. There's so much more to machine learning so this is just a small case study. If you're like me, I learn best from this kind of depth-first approach, in contrast to breadth-first which in machine learning is insanely broad. 
 
-If you want to learn more about machine learning in a broad sense, here's a couple of resources I've found extrememly helpful:
+If you want to learn more about machine learning in a broad sense, here's a few resources I've found extrememly helpful:
 1. [Max Liani's Deep Neural Network Dive posts][Liani] - These are so, so very good. As I mentioned, my post is basically a rehash of his but just from a different perspective. I would go as far as saying I could not have accomplished my DirectML port without these posts. What I love about his posts is Max is a rendering engineer and so it's explained from the perspective of a machine-learning "outsider' which I think helps him explain things in a way that reads very naturally for us average Joes. If you just read one of my resources, read this one.
 2. [Neural Networks and Deep Learning][MLBook] - This is essentially a textbook that's freely available online. I'll admit I haven't read the whole thing and I didn't do any of the exercises. But when I was starting to wrap my head around *what is machine learning*, this is was the best resource to breaking down the low level building blocks. If you're interested Things like operators, weights, biases, etc, I would absolutely recommend this as a starting resource.
-3. [SIGGRAPH: Hands-on Workshop: Machine Learning and Neural Network][SIGGRAPHWorkshop]: Similar to the above, I'll admit I didn't do the exercises. But this was an interesting overview that I felt was a little more high-level than the above, and the exercise are 
+3. [SIGGRAPH: Hands-on Workshop: Machine Learning and Neural Network][SIGGRAPHWorkshop]: Similar to the above, I'll admit I didn't do the exercises. But this was an interesting overview that focused more on the high level details of a neural network
 
 
 [MLBook]: http://neuralnetworksanddeeplearning.com/
